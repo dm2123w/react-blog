@@ -28,16 +28,31 @@
 .navbar a {
     margin-left: 16px;
     text-decoration: none;
-    padding: 6px;
     font-size: 20px;
 }
 
-.navbar a:hover {
+.home {
+    padding: 6px;
+}
+
+.home:hover {
     color: rgb(167, 167, 167);
 }
 
+.new-blog {
+    color: white;
+    background-color: rgb(191, 43, 204);
+    border-radius: 6px;
+    padding-inline: 12px;
+}
+
+.new-blog:hover {
+    color: white;
+    background-color: rgb(206, 115, 214);
+}
+
 .content {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
 }
