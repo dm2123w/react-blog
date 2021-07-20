@@ -41,14 +41,14 @@
 
 .new-blog {
     color: white;
-    background-color: rgb(191, 43, 204);
+    background-color: rgb(30, 161, 63);
     border-radius: 6px;
     padding-inline: 12px;
 }
 
 .new-blog:hover {
     color: white;
-    background-color: rgb(206, 115, 214);
+    background-color: rgb(29, 201, 72);
 }
 
 .content {
