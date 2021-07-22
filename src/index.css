@@ -31,11 +31,11 @@
     font-size: 20px;
 }
 
-.home {
+.home-button {
     padding: 6px;
 }
 
-.home:hover {
+.home-button:hover {
     color: rgb(167, 167, 167);
 }
 
@@ -73,3 +73,10 @@
     color: rgb(0, 224, 97);
     margin-bottom: 8px;
 }
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
