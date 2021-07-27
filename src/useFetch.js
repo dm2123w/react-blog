@@ -31,7 +31,7 @@ const useFetch = (url) => {
                         setIsLoading(false);
                     }
                 });
-        }, 1000);
+        }, 200);
 
         return () => abortCont.abort();
     }, [url]);
