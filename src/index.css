@@ -138,6 +138,12 @@
     background-color: rgb(29, 201, 72);
 }
 
+.blog-button {
+    font-size: 18px;
+    margin: 10px;
+    min-width: 100px;
+}
+
 .blog-body,
 .blog-author {
     font-family: "Noto Sans JP";
