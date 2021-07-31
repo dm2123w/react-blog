@@ -144,6 +144,12 @@
     min-width: 100px;
 }
 
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
 .blog-body,
 .blog-author {
     font-family: "Noto Sans JP";

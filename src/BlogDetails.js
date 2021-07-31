@@ -27,11 +27,13 @@ const BlogDetails = () => {
                     <h2>{blog.title}</h2>
                     <p className="blog-author">Written by {blog.author}</p>
                     <div className="blog-body">{blog.body}</div>
-                    <button className="blog-button">Edit</button>
-                    <button className="blog-button">Share</button>
-                    <button className="blog-button" onClick={handleClick}>
-                        Delete
-                    </button>
+                    <div className="buttons">
+                        <button className="blog-button">Edit</button>
+                        <button className="blog-button">Share</button>
+                        <button className="blog-button" onClick={handleClick}>
+                            Delete
+                        </button>
+                    </div>
                 </article>
             )}
         </div>
