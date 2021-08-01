@@ -2,9 +2,9 @@ import React from "react";
 
 const DarkModeSwitch = () => {
     return (
-        <label className="Switch">
+        <label className="switch">
             <input type="checkbox" />
-            <span className="Slider" />
+            <span className="slider" />
         </label>
     );
 };
