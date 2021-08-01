@@ -20,7 +20,7 @@ const Create = () => {
             body: JSON.stringify(blog),
         }).then(() => {
             setIsLoading(false);
-            history.push('/')
+            history.push("/");
         });
     };
 
@@ -49,8 +49,12 @@ const Create = () => {
                     <option value="mario">Mario</option>
                     <option value="yoshi">Yoshi</option>
                 </select>
-                {!isLoading && <button>Add Blog</button>}
-                {isLoading && <button disabled>Adding Blog...</button>}
+                {!isLoading && <button className="add-blog">Add Blog</button>}
+                {isLoading && (
+                    <button className="add-blog" disabled>
+                        Adding Blog...
+                    </button>
+                )}
             </form>
         </div>
     );

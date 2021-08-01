@@ -149,9 +149,27 @@
     justify-content: flex-end;
 }
 
-
 .blog-body,
 .blog-author {
     font-family: "Noto Sans JP";
     text-align: justify;
+}
+
+label,
+input,
+textarea,
+select,
+option {
+    font-family: "Noto Sans JP";
+}
+
+input,
+textarea,
+select {
+    border-radius: 6px;
+    resize: vertical;
+}
+
+.add-blog {
+    margin: 10px;
 }
