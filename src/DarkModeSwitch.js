@@ -1,10 +1,12 @@
 import React from "react";
+import cx from "classnames";
 
-const DarkModeSwitch = () => {
+const DarkModeSwitch = ({ rounded = false }) => {
+    const sliderCX = cx("slider", { rounded: rounded });
     return (
         <label className="switch">
             <input type="checkbox" />
-            <span className="slider" />
+            <span className={sliderCX} />
         </label>
     );
 };

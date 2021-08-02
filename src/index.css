@@ -195,6 +195,7 @@ select {
     left: 0;
     bottom: 0;
     background-color: #ccc;
+    transition: 0.4s;
 }
 
 .slider:before {
@@ -205,8 +206,20 @@ select {
     left: 4px;
     bottom: 4px;
     background-color: white;
+    transition: 0.4s;
 }
 
+input:checked + .slider {
+    background-color: #2196f3;
+}
 input:checked + .slider:before {
     transform: translateX(26px);
+}
+
+.slider.rounded {
+    border-radius: 34px;
+}
+
+.slider.rounded:before {
+    border-radius: 50%;
 }
