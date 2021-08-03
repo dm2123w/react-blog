@@ -6,34 +6,44 @@ import Create from "./Create";
 import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 import DarkModeSwitch from "./DarkModeSwitch";
+import { ThemeProvider } from "styled-components";
 
 function App() {
     const [isToggled, setIsToggled] = useState(false);
+
+    const [theme, setTheme] = useState("light");
+
+    const themeToggler = () => {
+        theme === "light" ? setTheme("dark") : setTheme("light");
+    };
+
     return (
         <Router>
-            <div className="App">
-                <DarkModeSwitch
-                    isToggled={isToggled}
-                    onToggle={() => setIsToggled(!isToggled)}
-                />
-                <Navbar />
-                <div className="content">
-                    <Switch>
-                        <Route exact path="/">
-                            <Home />
-                        </Route>
-                        <Route path="/create">
-                            <Create />
-                        </Route>
-                        <Route path="/blogs/:id">
-                            <BlogDetails />
-                        </Route>
-                        <Route path="*">
-                            <NotFound />
-                        </Route>
-                    </Switch>
+            <ThemeProvider theme={theme === light ? "" : ""}>
+                <div className="App">
+                    <DarkModeSwitch
+                        isToggled={isToggled}
+                        onToggle={() => setIsToggled(!isToggled)}
+                    />
+                    <Navbar />
+                    <div className="content">
+                        <Switch>
+                            <Route exact path="/">
+                                <Home />
+                            </Route>
+                            <Route path="/create">
+                                <Create />
+                            </Route>
+                            <Route path="/blogs/:id">
+                                <BlogDetails />
+                            </Route>
+                            <Route path="*">
+                                <NotFound />
+                            </Route>
+                        </Switch>
+                    </div>
                 </div>
-            </div>
+            </ThemeProvider>
         </Router>
     );
 }
