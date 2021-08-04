@@ -1,9 +1,9 @@
-const lightTheme = {
+export const lightTheme = {
     body: "#fff",
     fontColor: "#000",
 };
 
-const darkTheme = {
+export const darkTheme = {
     body: "#000",
     fontColor: "#fff",
 };

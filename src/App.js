@@ -7,6 +7,7 @@ import BlogDetails from "./BlogDetails";
 import NotFound from "./NotFound";
 import DarkModeSwitch from "./DarkModeSwitch";
 import { ThemeProvider } from "styled-components";
+import { lightTheme, darkTheme } from "./themes";
 
 function App() {
     const [isToggled, setIsToggled] = useState(false);
@@ -19,7 +20,7 @@ function App() {
 
     return (
         <Router>
-            <ThemeProvider theme={theme === light ? "" : ""}>
+            <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
                 <div className="App">
                     <DarkModeSwitch
                         isToggled={isToggled}
