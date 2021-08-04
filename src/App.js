@@ -8,6 +8,7 @@ import NotFound from "./NotFound";
 import DarkModeSwitch from "./DarkModeSwitch";
 import styled, { ThemeProvider } from "styled-components";
 import { lightTheme, darkTheme, GlobalStyles } from "./themes";
+import cx from "classnames";
 
 function App() {
     const [isToggled, setIsToggled] = useState(false);
@@ -17,23 +18,31 @@ function App() {
         theme === "light" ? setTheme("dark") : setTheme("light");
     };
 
-    const StyledApp = styled.div`
-        color: ${(props) => props.theme.fontColor};
-    `;
+    const DarkMode = ({ rounded = false, isToggled, onToggle }) => {
+        const sliderCX = cx("slider", { rounded: rounded });
+        return (
+            <label className="switch">
+                <input
+                    type="checkbox"
+                    checked={isToggled}
+                    onChange={onToggle}
+                />
+                <span className={sliderCX} />
+            </label>
+        );
+    };
 
     return (
         <Router>
             <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
                 <GlobalStyles />
-                <StyledApp>
                     <div className="App">
                         <DarkModeSwitch
                             isToggled={isToggled}
-                            onToggle={() => setIsToggled(!isToggled)}
+                            onToggle={() =>
+                                setIsToggled(!isToggled) || themeToggler()
+                            }
                         />
-                        <button onClick={() => themeToggler()}>
-                            Change Theme
-                        </button>
                         <Navbar />
                         <div className="content">
                             <Switch>
@@ -52,7 +61,6 @@ function App() {
                             </Switch>
                         </div>
                     </div>
-                </StyledApp>
             </ThemeProvider>
         </Router>
     );
